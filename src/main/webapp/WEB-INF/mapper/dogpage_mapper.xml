@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dog">
+	<insert id="addDog" parameterType="kr.co.ham.beans.DogpageBean">
+		<![CDATA[
+			insert into mypage (myp_key, myp_dog_name, myp_dog_birth, myp_dog_gender, myp_dog_breed,  dog_writer_index)
+			values (#{myp_key}, #{myp_dog_name}, #{myp_dog_birth},  #{myp_dog_gender}, #{myp_dog_breed},  #{dog_writer_index})
+		]]>
+	</insert>
+	
+	<select id="getDogContentInfo" parameterType="java.lang.Integer" resultType="kr.co.ham.beans.DogpageBean">
+		<![CDATA[
+				  select myp_dog_name, myp_dog_birth, myp_dog_gender,
+			      dog_writer_index, a1.myp_dog_breed
+				  from mypage
+				  where dog_writer_index = #{dog_writer_index}
+		]]>
+	</select>
+</mapper>

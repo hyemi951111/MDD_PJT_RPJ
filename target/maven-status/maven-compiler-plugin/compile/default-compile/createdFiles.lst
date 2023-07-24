@@ -1,0 +1,9 @@
+kr\co\softcampus\controller\CommunityController.class
+kr\co\softcampus\controller\MainController.class
+kr\co\softcampus\controller\UserController.class
+kr\co\softcampus\controller\DiaryController.class
+kr\co\softcampus\config\RootAppContext.class
+kr\co\softcampus\controller\HomeController.class
+kr\co\softcampus\controller\MyPageController.class
+kr\co\softcampus\config\SpringConfigClass.class
+kr\co\softcampus\config\ServletAppContext.class

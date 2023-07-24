@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com">
+	
+	<insert id="addContentInfo" parameterType="kr.co.ham.beans.CommunityBean">
+	
+		<selectKey keyProperty="com_key" order="BEFORE" resultType="java.lang.Integer">
+			select community_seq.nextval from dual
+		</selectKey>
+		
+		<![CDATA[
+			insert into community_table(com_key, com_date, com_title,
+													 com_writer_index, com_content, com_file)
+			values (#{com_key}, sysdate, #{com_title}, #{com_writer_index}, #{com_content},
+			#{com_file, jdbcType=VARCHAR})
+		]]>
+	</insert>
+
+	<select id="getContentList"  parameterType="java.lang.Integer"  resultType="kr.co.ham.beans.CommunityBean">
+		<![CDATA[
+					select a1.com_key,  a1.com_title, a2.user_name as com_writer_name, 
+			      	to_char(a1.com_date, 'YYYY-MM-DD') as com_date
+					from community_table a1, user_table a2
+					where a1.com_writer_index = a2.user_key 
+					order by a1.com_key desc
+		]]>
+	</select>
+	
+	<select id="getContentSearch"  parameterType="hashMap"  resultType="kr.co.ham.beans.CommunityBean">
+			<![CDATA[
+					select  a1.com_key, a1.com_title, a2.user_name as com_writer_name,
+					to_char(a1.com_date, 'YYYY-MM-DD') as com_date
+					from community_table a1, user_table a2
+					
+			]]>
+			
+			<if test='searchType.equals("a1.com_title")'>
+ 			 WHERE a1.com_title LIKE  '%' || #{keyword} || '%' and a1.com_writer_index = a2.user_key
+			 </if>
+ 
+			 <if test='searchType.equals("a2.user_name")'>
+			  WHERE a2.user_name LIKE  '%' || #{keyword} || '%' and a1.com_writer_index = a2.user_key
+			 </if>
+			 <![CDATA[
+			 order by a1.com_key desc
+			 ]]>
+	</select>
+	
+	<select id="getContentInfo" parameterType="java.lang.Integer" resultType="kr.co.ham.beans.CommunityBean">
+		<![CDATA[
+			select a2.user_name as com_writer_name, 
+			       to_char(a1.com_date, 'YYYY-MM-DD') as com_date, 
+			       a1.com_title, a1.com_content, a1.com_file, a1.com_writer_index
+				   from community_table a1, user_table a2
+				   where a1.com_writer_index = a2.user_key 
+			       and com_key = #{com_key}
+		]]>
+	</select>
+	
+	<update id="modifyContentInfo" parameterType="kr.co.ham.beans.CommunityBean">
+		<![CDATA[
+			update community_table
+			set com_title = #{com_title}, com_content= #{com_content},
+			com_file = #{com_file, jdbcType=VARCHAR}
+			where com_key = #{com_key}
+		]]>
+	</update>
+	
+	<delete id="deleteContentInfo" parameterType="java.lang.Integer">
+		<![CDATA[
+			delete from community_table where com_key = #{com_key}
+		]]>
+	</delete>
+	
+	<select id="getContentCnt" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+		<![CDATA[
+			select count(*) from community_table
+		]]>
+	</select>
+	
+		<select id="getContentCntSearch" parameterType="hashMap" resultType="java.lang.Integer">
+		<![CDATA[
+			select count(*) from community_table a1, user_table a2
+		]]>
+			
+			<if test='searchType.equals("a1.com_title")'>
+ 			 WHERE a1.com_title LIKE  '%' || #{keyword} || '%' and a1.com_writer_index = a2.user_key
+			 </if>
+ 
+			 <if test='searchType.equals("a2.user_name")'>
+			  WHERE a2.user_name LIKE  '%' || #{keyword} || '%' and a1.com_writer_index = a2.user_key
+			 </if>
+			 
+	</select>
+</mapper>

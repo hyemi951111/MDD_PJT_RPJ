@@ -1,0 +1,570 @@
+/*폰트 전체 설정*/
+@font-face {
+	font-family: 'UhBeeSe_hyun';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'UhBeeSe_hyun', cursive;
+}
+/*네비바 배경 이미지*/
+.backImage_nav {
+	background-image: url("./image/back_foot.jpg");
+	background-repeat: repeat;
+}
+/*네비바 밑에 배경 이미지*/
+.backImage_view {
+	-ms-overflow-style: none;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	position: relative;
+	background-repeat: repeat;
+	background-attachment : fixed;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.backImage_view2 {
+	width: 100%;
+	height: 100%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: relative;
+}
+/*네비바 밑에 배경 이미지 가상 요소 코드*/
+.backImage_view::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view2::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+
+/*top 페이지*/
+
+/*그루몽구 사진 설정*/
+.gmPhoto {
+	position: relative;
+	margin-top: -100px;
+	left: 500px;
+	right: 100px;
+}
+/*네비바 폰트 관련 설정*/
+.nav-item {
+	font-weight: bold;
+	font-size: 25px;
+}
+/*네비바 중앙 정렬 설정*/
+#center {
+	left: 50%;
+}
+/*네비바 모서리 둥글게 설정
+ #totalNav{
+    border-radius: 30px 30px 30px 30px;
+ }*/
+/*로고 이미지*/
+.logo {
+	position: relative;
+	top: 50px;
+	left: 80px;
+}
+
+/*login 페이지*/
+
+/*로그인 이미지*/
+.login {
+	position: relative;
+	top: -40px;
+	margin-left: 1100px;
+}
+
+/*로그아웃 시 이미지
+ .logout{
+  position: relative;
+  top: -40px;
+  margin-left: 1100px;
+}*/
+
+/*회원가입 이미지*/
+.join {
+	position: relative;
+	top: -120px;
+	margin-left: 1300px;
+}
+
+/*로그인 폼 상자*/
+.login_box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 30px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	margin-top: 135px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 3px solid #FFC19E;
+}
+/*로그인 폼 상자안의 login*/
+.login_title {
+	position: relative;
+	font-size: 50px;
+	padding-left: 110px;
+	padding-bottom: 20px;
+}
+/*로그인 폼 상자안의 id*/
+.id {
+	font-size: 30px;
+	padding-left: 215px;
+	padding-bottom: 10px;
+	position: relative;
+}
+/*로그인 폼 상자안의 pw*/
+.pw {
+	font-size: 30px;
+	padding-left: 215px;
+	padding-bottom: 10px;
+	padding-top: 5px;
+	position: relative;
+}
+/*id form 상자*/
+#ID_form {
+	padding-left: 120px;
+}
+/*pw form 상자*/
+#PW_form {
+	padding-left: 120px;
+	padding-bottom: 20px;
+}
+
+/*logout 페이지*/
+.logout_box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 60px;
+	padding-right: 50px;
+	padding-bottom: 60px;
+	padding-left: 50px;
+	margin-top: 230px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 3px solid #FFC19E;
+}
+
+.logout_text {
+	position: relative;
+	font-size: 35px;
+	padding-bottom: 10px;
+	padding-left: 110px;
+}
+
+/*home 페이지*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.polaroids1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: -150px;
+}
+
+.polaroids2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: -400px;
+}
+
+.polaroid {
+	position: relative;
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 250px;
+	height: 300px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.polaroid img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+/*ID 찾기 페이지*/
+.find_id__box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 30px;
+	padding-right: 50px;
+	padding-bottom: 40px;
+	padding-left: 50px;
+	margin-top: 180px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 3px solid #FFC19E;
+}
+
+/*diary_write*/
+.card {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+/*산책 여부 체크*/
+.walk_check {
+	margin-top: 10px;
+	margin-left: 30px;
+}
+/*버튼들*/
+.diary_in_button {
+	padding-top: 20px;
+}
+/*textarea 안의 밑줄선*/
+.note {
+	background-attachment: local;
+	background-image: linear-gradient(to right, white 10px, transparent 10px),
+		linear-gradient(to left, white 10px, transparent 10px),
+		repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white
+		31px);
+	line-height: 31px;
+	padding: 8px 10px;
+	border: white;
+	resize: none;
+}
+/*날씨*/
+.weather {
+	margin-top: -90px;
+	margin-left: 300px;
+}
+
+/*dog_community 페이지 */
+.serch_com {
+	margin-left: 1150px;
+	margin-top: 45px;
+}
+
+.table td, .table th {
+	vertical-align: middle;
+	padding: 15px;
+	background-color: #F6F6F6;
+}
+
+.table td:first-child, .table th:first-child {
+	width: 5%;
+}
+
+.table td:nth-child(2), .table th:nth-child(2) {
+	width: 60%;
+}
+
+.table td:nth-child(3), .table th:nth-child(3) {
+	width: 10%;
+}
+
+.table td:nth-child(4), .table th:nth-child(4) {
+	width: 15%;
+}
+
+.table td:nth-child(5), .table th:nth-child(5) {
+	width: 10%;
+}
+
+.page-link {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.page-item.active .page-link {
+	z-index: 1;
+	color: #555;
+	font-weight: bold;
+	background-color: #f1f1f1;
+	border-color: #ccc;
+}
+
+.page-link:focus, .tr_style:hover {
+	color: #000;
+	background-color: #fafafa;
+	border-color: #ccc;
+}
+
+#write_btn {
+	margin-right: -560px;
+}
+
+/*dog_community_write 페이지*/
+.button-container {
+	text-align: right;
+	margin-top: 20px;
+}
+
+#form-box {
+	margin: 50px auto;
+	background-color: #F6F6F6;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	max-width: 800px;
+}
+
+/*diary_list 페이지*/
+
+.diary_list_img{
+	margin-left:500px;
+}
+/*dog_mypage 페이지*/
+#dog {
+	font-size: 30px;
+	padding-left: 140px;
+	padding-right: 800px;
+	padding-top: -30px
+}
+
+#human {
+	font-size: 30px;
+	padding-left: 170px;
+	padding-right: 900px;
+	padding-top: -10px
+}
+/*.diary_note_back{
+	display: inline-block;
+}*/
+.total_memo {
+	margin-left: 160px;
+	margin-top: -30px;
+}
+
+.memo_container {
+	position: relative;
+	display: inline-block;
+}
+
+.memo_text {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	width: 80%;
+}
+
+.memo_text2 {
+	position: absolute;
+	top: 25%;
+	left: 60%;
+	width: 90%;
+}
+
+.memo_text textarea {
+	border: none;
+	font-size: 24px;
+	width: 100%;
+	height: 100%;
+	resize: none;
+}
+
+#subject {
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+#subject2 {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 19px;
+}
+
+#subject2_1 {
+	font-size: 19px;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+#subject2_2 {
+	font-size: 19px;
+	padding-left: 15px;
+	padding-top: 5px;
+}
+
+#subject2_3 {
+	font-size: 19px;
+	padding-left: 5px;
+	padding-top: 25px;
+}
+
+#exampleFormControlInput1 {
+	margin-top: -40px;
+	margin-left: -70px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#exampleFormControlInput2 {
+	margin-top: -40px;
+	margin-left: -70px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#exampleFormControlInput3 {
+	margin-top: -40px;
+	margin-left: -90px;
+	width: 220px;
+}
+
+#exampleFormControlInput4 {
+	margin-top: -25px;
+	margin-left: -90px;
+	margin-bottom: 10px;
+	width: 220px;
+}
+
+#exampleFormControlInput5 {
+	margin-top: -30px;
+	margin-left: -85px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#exampleFormControlInput6 {
+	margin-top: -40px;
+	margin-left: -85px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#gender_total {
+	padding-left: 30px;
+}
+
+#dog_category {
+	margin-top: -35px;
+	margin-left: 105px;
+	margin-bottom: 20px;
+}
+
+#page_m {
+	margin-top: 35px;
+	margin-left: 105px;
+}
+
+#page_i {
+	margin-top: 35px;
+	margin-left: -760px;
+}
+
+#page_m2 {
+	margin-left: 900px;
+	margin-right: -360px;
+	margin-top: -220px;
+}
+
+#page_i2 {
+	margin-left: 250px;
+	margin-right: 120px;
+	margin-top: -220px;
+}
+/*join 페이지*/
+
+/* 회원가입 폼 스타일 */
+.signup-form {
+	width: 600px;
+	height: 680px;
+	margin-top: 50px;
+	margin-left: 490px;
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 30px;
+	padding-bottom: -10px;
+	padding-left: 80px;
+	box-sizing: border-box;
+	border: 3px solid #FFC19E;
+}
+
+/* 입력 칸 스타일 */
+.form-group {
+	margin-bottom: 20px;
+}
+
+#j_label {
+	display: block;
+	margin-bottom: 5px;
+	padding-left: 190px;
+}
+
+#j_input {
+	width: 250px;
+	padding: 10px;
+	margin-left: 100px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	outline: none;
+}
+
+input[type="submit"] {
+	background-color: #FFBB00;
+	color: rgb(8, 4, 4);
+	border: none;
+	padding: 10px 20px;
+	margin-left: 180px;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.error-text {
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
+}

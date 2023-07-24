@@ -1,0 +1,950 @@
+/*폰트 전체 설정*/
+@font-face {
+	font-family: 'UhBeeSe_hyun';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'UhBeeSe_hyun', cursive;
+}
+/*네비바 배경 이미지*/
+.backImage_nav {
+	background-image: url("./image/back_foot.jpg");
+	background-repeat: repeat;
+}
+/*네비바 밑에 배경 이미지*/
+.backImage_view {
+	-ms-overflow-style: none;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	position: relative;
+	background-repeat: repeat;
+	background-attachment : fixed;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+/*find_id 배경*/
+.backImage_view1 {
+	width: 100%;
+	height: 100%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*로그인 배경*/
+.backImage_view2 {
+	width: 100%;
+	height: 110%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*회원가입 배경*/
+.backImage_view3 {
+	width: 100%;
+	height: 130%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*마이페이지 배경*/
+.backImage_view4 {
+	width: 100%;
+	height: 110%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*메인 배경*/
+.backImage_view5 {
+	width: 100%;
+	height: 110%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*커뮤니티 메인 배경*/
+.backImage_view6 {
+	width: 100%;
+	height: 110%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*다이어리 메인 배경*/
+.backImage_view7 {
+	width: 100%;
+	height: 90%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*다이어리 목록 배경*/
+.backImage_view8 {
+	width: 100%;
+	height: 110%;
+	background-attachment : fixed;
+	background-repeat: repeat;
+	position: absolute;
+}
+/*네비바 밑에 배경 이미지 가상 요소 코드*/
+.backImage_view::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view1::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view2::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view3::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view4::after {
+	width: 100%;
+	height: 110%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view5::after {
+	width: 100%;
+	height: 130%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view6::after {
+	width: 100%;
+	height: 110%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view7::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+.backImage_view8::after {
+	width: 100%;
+	height: 110%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+/*top 페이지*/
+
+/*그루몽구 강아지 사진 설정*/
+.gmPhoto {
+	position: relative;
+	margin-top: -100px;
+	left: 500px;
+	right: 100px;
+}
+.gmPhoto2 {
+	position: relative;
+	margin-top: 10px;
+	margin-left: 600px;
+	right: 100px;
+}
+/*네비바 폰트 관련 설정*/
+.nav-item {
+	font-weight: bold;
+	font-size: 25px;
+}
+/*네비바 중앙 정렬 설정*/
+#center {
+	left: 50%;
+}
+/*네비바 모서리 둥글게 설정
+ #totalNav{
+    border-radius: 30px 30px 30px 30px;
+ }*/
+/*로고 이미지*/
+.logo {
+	position: relative;
+	top: 50px;
+	left: 80px;
+}
+
+/*login 페이지*/
+
+/*로그인 이미지*/
+.login {
+	position: relative;
+	top: -40px;
+	margin-left: 1100px;
+}
+
+/*로그아웃 시 이미지*/
+ #logout{
+  position: relative;
+  top: -40px;
+  margin-left: 1100px;
+  z-index: 1;
+}
+/*회원탈퇴 이미지*/
+#withdrawal {
+	position: relative;
+	top: -105px;
+	margin-left: 1300px;
+	z-index: 1;
+}
+/*회원가입 이미지*/
+.join {
+	position: relative;
+	top: -120px;
+	margin-left: 1300px;
+}
+
+/*로그인 폼 상자*/
+.login_box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 30px;
+	padding-right: 80px;
+	padding-bottom: 50px;
+	padding-left: 70px;
+	position: absolute;
+	margin-top: 125px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 5px solid #FFC19E;
+	
+}
+#reChk{
+	margin-top: -60px;
+	margin-bottom: 5px;
+	margin-left: 340px;
+	margin-right: 5px;
+}
+.backImage_view::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../image/back_foot.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+/*로그인 폼 상자안의 login*/
+.login_title {
+	position: relative;
+	font-size: 50px;
+	padding-left: 110px;
+	padding-bottom: 20px;
+}
+.lg_pw{
+	font-size: 20px;
+	padding-left: 200px;
+	padding-bottom: 10px;
+	position: relative;
+}
+/*로그인 폼 상자안의 id*/
+.id {
+	font-size: 25px;
+	padding-left: 220px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.id_login {
+	font-size: 25px;
+	padding-left: 200px;
+	padding-bottom: 10px;
+	position: relative;
+}
+/*로그인 폼 상자안의 pw*/
+.pw {
+	font-size: 25px;
+	padding-left: 180px;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	position: relative;
+}
+.id_pw {
+	font-size: 25px;
+	padding-left: 210px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.pw_pw {
+	font-size: 25px;
+	padding-left: 200px;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	position: relative;
+}
+/*id form 상자*/
+#ID_form {
+	padding-left: 120px;
+}
+/*pw form 상자*/
+#PW_form {
+	padding-left: 120px;
+	padding-bottom: 20px;
+}
+
+/*logout 페이지*/
+.logout_box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 60px;
+	padding-right: 50px;
+	padding-bottom: 60px;
+	padding-left: 50px;
+	margin-top: 230px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 3px solid #FFC19E;
+}
+
+.logout_text {
+	position: relative;
+	font-size: 35px;
+	padding-bottom: 10px;
+	padding-left: 110px;
+}
+
+/*home 페이지*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.polaroids1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: -30px;
+}
+
+.polaroids2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: -400px;
+}
+
+.polaroid {
+	position: relative;
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 250px;
+	height: 300px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.polaroid img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+/*ID 찾기 페이지*/
+.find_id_box {
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 60px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	margin-top: 125px;
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 5px solid #FFC19E;
+}
+/*diary_main*/
+td {
+	width: 130px;
+	height: 50px;
+}
+
+.Calendar {
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 350px;
+	margin-right: -20px;
+	display: inline-block;
+}
+
+.Calendar>thead>tr:first-child>td {
+	font-weight: bold;
+}
+
+.Calendar>thead>tr:last-child>td {
+	background-color: #F6F6F6;
+	color: black;
+}
+
+.pastDay {
+	background-color: white;
+	cursor: pointer;
+}
+
+.today {
+	background-color: #FFCA64;
+	cursor: pointer;
+}
+
+.futureDay {
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.futureDay.choiceDay, .today.choiceDay {
+	background-color: white;
+	cursor: pointer;
+}
+
+#calYear, #calMonth {
+	font-size: 40px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/*diary_main*/
+.diary_list_total{
+	margin-top: 0px;
+}
+/*diary_write*/
+.card {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+/*산책 여부 체크*/
+.walk_check {
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-bottom: -50px;
+}
+/*버튼들*/
+.diary_in_button {
+	padding-top: 20px;
+}
+/*textarea 안의 밑줄선*/
+.note {
+	background-attachment: local;
+	background-image: linear-gradient(to right, white 10px, transparent 10px),
+		linear-gradient(to left, white 10px, transparent 10px),
+		repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white
+		31px);
+	line-height: 31px;
+	padding: 8px 10px;
+	border: white;
+	resize: none;
+}
+/*날씨*/
+.weather {
+	margin-top: -120px;
+	margin-left: 300px;
+	margin-bottom: 30px;
+}
+.weather_read{
+	margin-top: -50px;
+	margin-left: 300px;
+	margin-bottom: 10px;
+}
+
+/*dog_community 페이지 */
+#select{
+	width:100px;
+	height:39px;
+}
+.search_com {
+	margin-top: 50px;
+	margin-left: 1045px;
+}
+.container{
+	margin-top: 40px;
+}
+.table td, .table th {
+	vertical-align: middle;
+	background-color: #F6F6F6;
+}
+
+.table td:first-child, .table th:first-child {
+	width: 10%;
+}
+
+.table td:nth-child(2), .table th:nth-child(2) {
+	width: 60%;
+}
+
+.table td:nth-child(3), .table th:nth-child(3) {
+	width: 10%;
+}
+
+.table td:nth-child(4), .table th:nth-child(4) {
+	width: 10%;
+}
+
+.table td:nth-child(5), .table th:nth-child(5) {
+	width: 10%;
+}
+
+.page-link {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.page-item.active .page-link {
+	z-index: 1;
+	color: #555;
+	font-weight: bold;
+	background-color: #f1f1f1;
+	border-color: #ccc;
+}
+
+.page-link:focus, .tr_style:hover {
+	color: #000;
+	background-color: #fafafa;
+	border-color: #ccc;
+}
+
+#write_btn {
+	margin-left: 20px;
+}
+
+/*dog_community_write 페이지*/
+.button-container {
+	text-align: right;
+	margin-top: 20px;
+}
+
+#form-box {
+	margin: 50px auto;
+	background-color: #F6F6F6;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	max-width: 800px;
+}
+
+/*diary_list 페이지*/
+
+.diary_list_img{
+	margin-left:500px;
+}
+/*dogpage & mypage*/
+#dog {
+	font-size: 30px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+}
+
+#human {
+	font-size: 30px;
+	padding-left: 70px;
+	padding-top: -20px;
+	padding-bottom: 20px;
+}
+/*.diary_note_back{
+	display: inline-block;
+}*/
+.total_memo {
+	margin-top: 35px;
+	margin-left: 480px;
+}
+.total_memo2 {
+	margin-left: 480px;
+}
+
+.memo_container {
+	position: relative;
+	display: inline-block;
+}
+
+.memo_text {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	width: 80%;
+}
+
+.memo_text2 {
+	position: absolute;
+	top: 25%;
+	left: 32%;
+	width: 90%;
+}
+
+.memo_text textarea {
+	border: none;
+	font-size: 24px;
+	width: 100%;
+	height: 100%;
+	resize: none;
+}
+#name{
+	padding-left: -10px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+#birth{
+	padding-left: 85px;
+	padding-top: 35px;
+	padding-bottom: 0px;
+	font-size: 20px;
+}
+#gender{
+	padding-left: 80px;
+	padding-bottom: 10px;
+	margin-top: -30px;
+	font-size: 20px;
+}
+#breed{
+	padding-left: 85px;
+	padding-bottom: 10px;
+	padding-top: 30px;
+	font-size: 20px;
+}
+#subject2 {
+	margin-left: -40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 19px;
+}
+#subject2_1 {
+	font-size: 19px;
+	margin-left: -55px;
+	padding-top: 25px;
+}
+#subject2_2 {
+	font-size: 19px;
+	margin-left: -67px;
+	padding-top: 5px;
+}
+
+#subject2_3 {
+	font-size: 19px;
+	margin-left: -83px;
+	padding-top: 25px;
+}
+#subject2_4 {
+	font-size: 19px;
+    margin-left: -55px;
+    margin-top: 25px;
+}
+
+#exampleFormControlInput1 {
+	margin-top: -40px;
+    margin-left: 65px;
+    margin-right: 100px;
+    margin-bottom: 0px;
+    width: 220px;
+}
+
+#exampleFormControlInput2 {
+	margin-top: -30px;
+    margin-left: 170px;
+    margin-bottom: 0px;
+    width: 220px;
+}
+
+#exampleFormControlInput3 {
+	margin-top: -40px;
+	margin-left: -90px;
+	width: 220px;
+}
+
+#exampleFormControlInput4 {
+	margin-top: -25px;
+	margin-left: -90px;
+	margin-bottom: 10px;
+	width: 220px;
+}
+
+#exampleFormControlInput5 {
+	margin-top: -32px;
+	margin-left: -85px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#exampleFormControlInput6 {
+	margin-top: -40px;
+	margin-left: -85px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+
+#exampleFormControlInput7 {
+	margin-top: -40px;
+	margin-left: -85px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+#exampleFormControlInput8{
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 100px;
+	width: 220px;
+}
+#exampleFormControlInput9 {
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	width: 220px;
+}
+#exampleFormControlInput11 {
+	margin-top: -35px;
+	margin-left: 120px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput12 {
+	margin-top: -35px;
+	margin-left: 120px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput13 {
+	margin-top: -35px;
+	margin-left: 120px;
+	margin-right: 100px;
+	margin-bottom: -5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput14 {
+	margin-top: -35px;
+	margin-left: 120px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput15 {
+	margin-top: -24px;
+	margin-left: 120px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput16 {
+	margin-top: 35px;
+	margin-left: 10px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#exampleFormControlInput17 {
+	margin-top: 35px;
+	margin-left: 10px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	width: 220px;
+}
+#joinBtn{
+	margin-left: 150px;
+	margin-top: 10px;
+}
+#gender_total {
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+#dog_category {
+	margin-top: -40px;
+	margin-left: 155px;
+}
+
+#page_m {
+	margin-top: 30px;
+    margin-left: 200px;
+}
+/*#page_i {
+	margin-top: 20px;
+	margin-left: -760px;
+}*/
+#page_m2 {
+	margin-left: 285px;
+	margin-right: -360px;
+	margin-top: -220px;
+}
+
+#page_i2 {
+	margin-left: 250px;
+	margin-right: 120px;
+	margin-top: -220px;
+}
+/*join 페이지*/
+
+#join_btn{
+	margin-right: -200px;
+}
+/* 회원가입 폼 스타일 */
+.signup-form {
+	width: 565px;
+	height: 850px;
+	margin-left: 490px;
+	margin-top: 125px;
+	margin-bottom: -50px;
+	background-color: #F6F6F6;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 20px;
+	padding-bottom: -20px;
+	padding-left: 80px;
+	box-sizing: border-box;
+	border: 5px solid #FFC19E;
+}
+
+/* 입력 칸 스타일 */
+.form-group {
+	margin-bottom: 20px;
+}
+
+#j_label {
+	display: flex;
+	margin-bottom: 5px;
+	padding-top: 50px;
+}
+#j_label2 {
+	display: flex;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 20px;
+}
+#j_label3 {
+	display: flex;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 20px;
+}
+#j_label4 {
+	display: flex;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 20px;
+}
+#j_label5 {
+	display: flex;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 20px;
+}
+#j_label6 {
+	display: flex;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 10px;
+}

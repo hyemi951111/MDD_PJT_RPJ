@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myp">
+	<select id="getModifyMypage" parameterType="java.lang.Integer" resultType="kr.co.ham.beans.UserBean">
+		<![CDATA[
+			select user_id, user_pw, user_phone, user_name, user_email
+			from user_table
+			where user_key = #{user_key}
+		]]>
+	</select>
+	
+	<update id="modifyMypageInfo" parameterType="kr.co.ham.beans.UserBean">
+		<![CDATA[
+			update user_table
+			set user_pw = #{user_pw}, user_phone = #{user_phone}, user_email = #{user_email}
+			where user_key = #{user_key}
+		]]>
+	</update>
+	
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dia">
+	
+	<insert id="addDiaryContent" parameterType="kr.co.ham.beans.DiaryBean">
+		<![CDATA[
+			insert into diary_table(dia_key, dia_date, dia_title, dia_walk, dia_content, dia_weather, dia_writer_index)
+			values (diary_real_seq.nextval, sysdate, #{dia_title}, #{dia_walk}, #{dia_content}, #{dia_weather}, #{dia_writer_index})
+		]]>
+	</insert>
+	
+	<select id="getDiaryList" parameterType="java.lang.Integer"  resultType="kr.co.ham.beans.DiaryBean">
+		<![CDATA[				   
+					        select a1.dia_key, to_char(a1.dia_date, 'YYYY-MM-DD') as dia_date, 
+					        a1.dia_title, a1.dia_walk, a1.dia_content, a1.dia_weather, a1.dia_writer_index
+							from diary_table a1, user_table a2
+							where a1.dia_writer_index = a2.user_key
+							and dia_writer_index =  #{dia_writer_index}
+							order by a1.dia_key desc
+		]]>
+	</select>
+	
+	<select id="getDiaryCnt" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+		<![CDATA[
+			select count(*) from diary_table where dia_writer_index =  #{dia_writer_index}
+		]]>
+	</select>
+
+	<select id="getDiaryInfo" parameterType="java.lang.Integer" resultType="kr.co.ham.beans.DiaryBean">
+			<![CDATA[
+					   select dia_title, dia_walk, dia_content, dia_weather
+					   from diary_table
+					   where dia_key = #{dia_key}
+			]]>
+	</select>
+	
+	<update id="modifyDiaryInfo" parameterType="kr.co.ham.beans.DiaryBean">
+		<![CDATA[
+			update diary_table
+			set dia_title = #{dia_title}, dia_walk = #{dia_walk},
+			dia_content= #{dia_content}, dia_weather = #{dia_weather}
+			where dia_key = #{dia_key}
+		]]>
+	</update>
+	
+	<delete id="deleteDiaryInfo" parameterType="java.lang.Integer">
+		<![CDATA[
+			delete from diary_table where dia_key = #{dia_key}
+		]]>
+	</delete>
+</mapper>
