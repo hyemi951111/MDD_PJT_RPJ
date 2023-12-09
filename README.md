@@ -11,9 +11,9 @@
 - <img src="https://img.shields.io/badge/JDK 1.8.0-34567C?style=flat&logoColor=white"/>
 - Server : <img src="https://img.shields.io/badge/apache tomcat 9.0-F09D13?style=flat&logo=apachetomcat&logoColor=white"/>
 - IDE : <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat&logo=eclipseide&logoColor=white"/>
-- Framework : <img src="https://img.shields.io/badge/Mybatis-000000?style=flat&logoColor=white"/>, <img src="https://img.shields.io/badge/Bootstrap5-512BD4?style=flat&logoColor=white"/>
+- Framework : <img src="https://img.shields.io/badge/Mybatis-000000?style=flat&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap5-512BD4?style=flat&logoColor=white"/>
 - Database : <img src="https://img.shields.io/badge/oracle-F80000?style=flat&logo=oracle&logoColor=white"/>
-- Library : <img src="https://img.shields.io/badge/hibernate-59666C?style=flat&logo=hibernate&logoColor=white"/>, <img src="https://img.shields.io/badge/JSTL-43A047?style=flat&logoColor=white"/>, <img src="https://img.shields.io/badge/JSON-000000?style=flat&logo=json&logoColor=white"/>
+- Library : <img src="https://img.shields.io/badge/hibernate-59666C?style=flat&logo=hibernate&logoColor=white"/> <img src="https://img.shields.io/badge/JSTL-43A047?style=flat&logoColor=white"/> <img src="https://img.shields.io/badge/JSON-000000?style=flat&logo=json&logoColor=white"/> <img src="https://img.shields.io/badge/spring JDBC-6DB33F?style=flat&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/spring MVC-6DB33F?style=flat&logo=spring&logoColor=white"/>
 ## ❤주요 기능
 #### 1️⃣회원가입
 ###### ✔아이디 중복 확인
